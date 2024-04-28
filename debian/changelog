@@ -1,5 +1,13 @@
-template-repository (1.0-1) unstable; urgency=medium
+json-schema-test-suite (2.0.0-1.1) unstable; urgency=medium
 
-  * Initial release
+  * Non-maintainer upload.
+  * Source-only upload.
+  * Bump debhelper-compat to 13
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Utkarsh Gupta <utkarsh@debian.org>  Thu, 18 Jun 2020 23:58:43 +0530
+
+json-schema-test-suite (2.0.0-1) unstable; urgency=medium
+
+  * Initial release (Closes: #956546).
+
+ -- Adam Cecile <acecile@le-vert.net>  Sun, 12 Apr 2020 17:00:22 +0200

@@ -1,0 +1,17 @@
+Description: Debianize paths
+
+Index: json-schema-test-suite-2.0.0/bin/jsonschema_suite
+===================================================================
+--- json-schema-test-suite-2.0.0.orig/bin/jsonschema_suite
++++ json-schema-test-suite-2.0.0/bin/jsonschema_suite
+@@ -25,9 +25,7 @@ else:
+     )
+ 
+ 
+-ROOT_DIR = os.path.abspath(
+-    os.path.join(os.path.dirname(__file__), os.pardir).rstrip("__pycache__"),
+-)
++ROOT_DIR = os.getenv("ROOT_DIR", "/usr/share/json-schema-test-suite")
+ SUITE_ROOT_DIR = os.path.join(ROOT_DIR, "tests")
+ 
+ REMOTES = {
