@@ -1,4 +1,16 @@
 #!/usr/bin/make -f
 
+include /usr/share/dpkg/pkg-info.mk
+
+SHORT_PKG_DESC := $(shell grep '^Description' debian/control | cut -d':' -f2 | sed 's/^[[:space:]]//')
+
 %:
-	dh $@
+	dh $@ --with python3
+
+override_dh_auto_install:
+	dh_auto_install
+	ROOT_DIR=$(CURDIR) help2man bin/jsonschema_suite  \
+	  --version-string="$(DEB_VERSION_UPSTREAM)" \
+	  --name="$(SHORT_PKG_DESC)" \
+	  --no-info \
+	  > debian/jsonschema_suite.1

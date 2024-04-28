@@ -1,0 +1,4 @@
+remotes			/usr/share/json-schema-test-suite/
+tests			/usr/share/json-schema-test-suite/
+test-schema.json	/usr/share/json-schema-test-suite/
+bin/jsonschema_suite	/usr/bin/
